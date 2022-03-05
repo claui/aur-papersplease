@@ -2,28 +2,24 @@
 # Contributor: Alex Szczuczko <alex at szc dot ca>
 
 pkgname=papersplease
-pkgver=1.1.65
-pkgrel=7
+pkgver=1.2.72
+pkgrel=1
 pkgdesc="Assume the role of an immigration inspector for the communist state of Arstotzka"
-arch=('i686' 'x86_64')
+arch=('x86_64')
 url="http://papersplea.se"
 license=('custom:commercial')
-depends=('hicolor-icon-theme')
-depends_x86_64=('lib32-libgl')
-depends_i686=('libgl')
-optdepends_x86_64=('lib32-alsa-lib: alsa sound support'
-                   'lib32-libpulse: pulseaudio sound support')
-optdepends_i686=('alsa-lib: alsa sound support'
-                 'libpulse: pulseaudio sound support')
+depends=('hicolor-icon-theme' 'lib32-libgl')
+optdepends=('lib32-alsa-lib: alsa sound support'
+            'lib32-libpulse: pulseaudio sound support')
 options=(!strip)
 source=("$pkgname.desktop"
         "launch-$pkgname.sh"
         "$pkgname.png"
-        "papers-please_${pkgver}_i386.tar.gz::hib://papers-please_${pkgver}_i386.tar.gz")
+        "papers-please_${pkgver}_x64.tar.gz::hib://papers-please_${pkgver}_x64.tar.gz")
 sha256sums=('478b736281d4d397bcff3972a548dc85bddae49342d561adefa25186310cd5ec'
             'e199745f2158fd04fd70ce463aa57452be3a5d8c9c390970e2cadbe7d2122dd4'
             'e8aaf890dbfa6363f0197892ca2abd5ac4a45918787a8524cf8c99d785000823'
-            '50562ad2b01cb7558147cd05de4dc37c02deb2e66fc5d3bff77994785f9551d7')
+            '41c60cecd525076128e1a5feeb691d63c5028006ec66c0eb772946a9476de9ae')
 
 # Disable compression of the package
 PKGEXT='.pkg.tar'
