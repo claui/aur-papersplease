@@ -3,12 +3,16 @@
 
 pkgname=papersplease
 pkgver=1.2.72
-pkgrel=1
+pkgrel=2
 pkgdesc="Assume the role of an immigration inspector for the communist state of Arstotzka"
 arch=('x86_64')
 url="http://papersplea.se"
 license=('custom:commercial')
-depends=('hicolor-icon-theme' 'lib32-libgl')
+depends=(
+  'hicolor-icon-theme'
+  'lib32-libgl'
+  'sdl2' # override statically-linked SDL; for details, see launch script
+)
 optdepends=('lib32-alsa-lib: alsa sound support'
             'lib32-libpulse: pulseaudio sound support')
 options=(!strip)
@@ -17,7 +21,7 @@ source=("$pkgname.desktop"
         "$pkgname.png"
         "papers-please_${pkgver}_x64.tar.gz::hib://papers-please_${pkgver}_x64.tar.gz")
 sha256sums=('478b736281d4d397bcff3972a548dc85bddae49342d561adefa25186310cd5ec'
-            'e199745f2158fd04fd70ce463aa57452be3a5d8c9c390970e2cadbe7d2122dd4'
+            'd1beeb8f8e65c25fea3ea8e77570992a6e48f527fa724423ad2ae056a0595bd0'
             'e8aaf890dbfa6363f0197892ca2abd5ac4a45918787a8524cf8c99d785000823'
             '41c60cecd525076128e1a5feeb691d63c5028006ec66c0eb772946a9476de9ae')
 
